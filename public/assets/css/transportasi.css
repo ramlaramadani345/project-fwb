@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255); /* Mengubah warna teks agar terlihat jelas di latar belakang */
+    position: relative; /* Menetapkan posisi relatif untuk konten */
+    overflow: hidden; /* Mencegah konten keluar dari area */
+}
+
+body::before {
+    content: "";
+    position: absolute; /* Menempatkan gambar di belakang konten */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/bc1.jpg'); /* Ganti dengan nama file gambar Anda */
+    background-size: cover; /* Memastikan gambar menutupi seluruh latar belakang */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+    filter: blur(4px); /* Mengaplikasikan efek blur yang lebih ringan */
+    z-index: -1; /* Menempatkan gambar di belakang konten */
+}
+
+body::after {
+    content: "";
+    position: absolute; /* Layer semi-transparan */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Layer hitam dengan transparansi */
+    z-index: -1; /* Menempatkan layer di belakang konten */
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.8); /* Transparansi untuk header */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    position: relative; /* Mengatur posisi relatif untuk konten */
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.transportation-list, .service-list {
+    background-color: rgba(81, 81, 81, 0.9); /* Transparansi untuk konten */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk tautan (link) */
+a {
+    display: block;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
+/* CSS untuk gambar */
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
