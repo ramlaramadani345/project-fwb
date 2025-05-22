@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin Dashboard</title>
+    <title>Owner Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets-admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -27,18 +27,18 @@
         <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('owner') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin</div>
+                <div class="sidebar-brand-text mx-3">Owner</div>
             </a>
 
             <hr class="sidebar-divider my-0">
 
             <!-- Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('owner') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -46,34 +46,27 @@
 
             <hr class="sidebar-divider">
 
-            <!-- owner -->
+            <!-- mobil -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Owner</span>
+                    <i class="fas fa-fw fa-car"></i>
+                    <span>Daftar Mobil</span>
                 </a>
             </li>
 
-           <!-- Kategori -->
-<li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKategori" aria-expanded="true" aria-controls="collapseKategori">
-        <i class="fas fa-fw fa-tags"></i>
-        <span>Kategori</span>
-    </a>
-    <div id="collapseKategori" class="collapse" aria-labelledby="headingKategori" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">Lihat Kategori</a>
-            <a class="collapse-item" href="#">Tambah Kategori</a>
-        </div>
-    </div>
-</li>
+            <!-- pesan -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-envelope fa-fw"></i>
+                    <span>Daftar Pesan</span>
+                </a>
+            </li>
 
-
-            <!-- pelanggan -->
+            <!-- Pembayaran -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-user"></i>
-                    <span>Pelanggan</span>
+                    <span>Daftar Penyewa</span>
                 </a>
             </li>
 
@@ -131,7 +124,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                @yield('konten')
+                @yield('content')
                 <!-- End of Page Content -->
 
             </div>

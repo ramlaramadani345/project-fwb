@@ -99,7 +99,7 @@ public function submitLogin(Request $request)
 
         // Redirect berdasarkan role
         if ($user->role === 'owner') {
-            return redirect()->intended('/dashboard-admin');
+            return redirect()->intended('/dashboard-owner');
         } elseif ($user->role === 'penyewa') {
             return redirect()->intended('/beranda');
         }elseif ($user->role === 'admin') {

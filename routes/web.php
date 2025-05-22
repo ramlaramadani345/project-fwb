@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OwnerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard;
 Route::get('/', function () {
@@ -16,6 +17,10 @@ Route::get('/detail', [Dashboard::class, 'detail'])->name('detail');
 Route::get('/pemesanan', [Dashboard::class, 'pemesanan'])->name('pemesanan');
 //admin
 Route::get('/dashboard-admin', [AdminController::class, 'Index'])->name('dashboard');
+
+//owner
+Route::get('/dashboard-owner', [OwnerController::class, 'Owner'])->name('owner');
+
 //register
 Route::get('/register-penyewa', [AuthController::class, 'RegisterPenyewa'])->name('registerpenyewa');
 Route::post('/registrasi/penyewa', [AuthController::class, 'submitRegistrasiPenyewa'])->name('registrasi.penyewa');
